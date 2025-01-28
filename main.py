@@ -73,3 +73,83 @@
 #
 # sveikink_su_pavadinimu('Jonas')
 # sveikink_su_pavadinimu('Asta', 'kolega')
+
+# Klaida: negalima dalyti iš nulio.
+# def dalink_spec(sk1, sk2, iki_sveiko_sk=False):
+#     if not iki_sveiko_sk:
+#         return sk1 / sk2
+#     return sk1 // sk2
+#  nesigauna nieko
+
+# def dalink_spec(sk1, sk2, iki_sveiko_sk=False):
+#     if sk2 == 0:
+#         return "Klaida: negalima dalyti iš nulio."
+#
+#     if not iki_sveiko_sk:
+#         return sk1 / sk2
+#     return sk1 // sk2
+# # Klaida: negalima dalyti iš nulio.
+#
+#
+# # Pavyzdžiai
+# print(dalink_spec(10, 2))  # 5.0
+# print(dalink_spec(10, 2, True))  # 5
+# print(dalink_spec(10, 0))  # Klaida: negalima dalyti iš nulio.
+
+# say_hello('Jerry')
+
+# print()
+
+
+# def add(x: int,  y: int) -> int:
+#     return x + y
+#
+# a = 1 + add(1, 3)
+
+# ----------------------------------------------------------
+# 5. TASK
+# Užduotis 5:
+# Sukurkite funkciją skaiciuoti_sumos_tipą(x, y, tik_teigiama=False), kuri
+# priimtų du skaičius ir grąžintų jų sumą.
+# • Jei tik_teigiama=True, funkcija grąžintų tik teigiamą sumą (jei suma neigiama,
+# grąžintų 0).
+# Docstringai funkcijose
+
+# def skaiciuoti_sumos_tipą(x, y, tik_teigiama=True):
+#     res =  x + y
+#     if not tik_teigiama:
+#         return  res
+#     if res < 0:
+#         return 0
+#     return res
+# print(skaiciuoti_sumos_tipą(15, 17, False))
+
+
+# def skaiciuoti_sumos_tipa(x: int, y: int, tik_teigiama=False) -> int:
+#     suma = x + y
+#     if tik_teigiama:
+#         return max(suma, 0)
+#     return suma
+#
+# print(skaiciuoti_sumos_tipa(5, 3))
+# print(skaiciuoti_sumos_tipa(5, -30, True))
+
+# ----------------------------------------------------------
+# 7. uzduotis ////////////// Importai iš mūsų sukurto modulio
+# galima iportuoti is kito failo
+a = 9
+b = 2
+
+print(a + b)
+print(a * b)
+
+# 8. uzduotis ////////////Visas modulio importavimas
+from mylib import matematika, matematika as m
+
+print(matematika.sudetis(1, 2))
+print(matematika.daugyba(5, 4))
+
+# 9. uzduotis//////////////Specifinių funkcijų importavimas
+
+print(m.sudetis(12, 3))
+print(d.daugyba(7, 6))

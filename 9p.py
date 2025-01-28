@@ -125,7 +125,7 @@
 # print(skaiciuoti_sumos_tipą(15, 17, False))
 
 
-# def skaiciuoti_sumos_tipa(x: int, y: int, tik_teigiama=False) -> int:
+# def skaiciuoti_sumos_tipa(x: int, y: int, tik_teigiama: bool=False) -> int:
 #     suma = x + y
 #     if tik_teigiama:
 #         return max(suma, 0)
@@ -135,3 +135,44 @@
 # print(skaiciuoti_sumos_tipa(5, -30, True))
 
 # ----------------------------------------------------------
+
+# 6 TASK -----------------------------------------
+
+# def skaiciuoti_sumos_tipa(x: int, y: int, tik_teigiama: bool=False) -> int:
+#     suma = x + y
+#     if tik_teigiama:
+#         return max(suma, 0)
+#     return suma
+
+# print(skaiciuoti_sumos_tipa(5, 3))
+# print(skaiciuoti_sumos_tipa(5, -30, True))
+#
+# def apskaiciuok_vidurki(skaiciai: list) -> float:
+#     if not skaiciai:
+#         return 0
+#     return sum(skaiciai) / len(skaiciai)
+#
+# print(apskaiciuok_vidurki([1, 2, 3, 4, 5]))
+#
+# # Užduotis 7: -------------------------------------
+# # Sukurkite funkciją prideti_zodi(tekstas: str, zodis: str) -> str, kuri priimtų
+# # sakinį ir pridedamą žodį, o tada grąžintų sakinį su tuo žodžiu gale.
+#
+# def prieti_zodi(tektas: str, zodis: str) -> str:
+#
+#     return tektas + " " + zodis
+# print()
+
+# ///////// 2025-01-28  /////////////
+
+def dalink(x: int, y: int) -> float:
+    return  x / y
+
+def daugink(x: int, y: int) -> int:
+    return  x * y
+
+def atimk(x: int, y: int) -> int:
+    return  x - y
+
+def pridek(x: int, y: int) -> int:
+    return  x + y
