@@ -39,7 +39,7 @@ print(atimtis(50, -25))
 print(dalyba(100, 4))
 # //////////////////////////////////////////////////////////////////////////////////////
 
-# from moduliai.ar
+import moduliai.aritmetika
 
 # 14. Modulio trumpinimas naudojant alias iš folderio
 # Užduotis 14:
@@ -47,8 +47,8 @@ print(dalyba(100, 4))
 # 2. Naudokite ar.atimtis(30, 10) ir ar.dalyba(50, 5).
 # 3. Išspausdinkite rezultatus.
 
-# print(atimtis(30, 1))
-# print(dalyba(50,5))
+print(atimtis(30, 1))
+print(dalyba(50,5))
 # //////////////////////////////////////////////////////////////////////////////////////
 
 import moduliai
