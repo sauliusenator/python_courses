@@ -12,7 +12,7 @@ print(atimtis(9, 10))
 print(round(dalyba(15, 3)))
 # //////////////////////////////////////////////////////////////////////////////////////
 
-from moduliai import aritmetika
+from moduliai import aritmetika as ar
 
 # 12. TASK  /////////////Visas modulio importavimas iš folderio /////////////
 # Užduotis 12:
@@ -20,8 +20,8 @@ from moduliai import aritmetika
 # 2. Naudokite moduliai.aritmetika.atimtis(20, 5) ir
 # moduliai.aritmetika.dalyba(10, 2).
 # 3. Išspausdinkite rezultatus.
-print(aritmetika.atimtis(20, 5))
-print(aritmetika.dalyba(10, 2))
+print(ar.atimtis(20, 5))
+print(ar.dalyba(10, 2))
 # //////////////////////////////////////////////////////////////////////////////////////
 
 
