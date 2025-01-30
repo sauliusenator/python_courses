@@ -270,7 +270,39 @@ import c1
 # print(sudeti_lamba(3, 15 ))
 ##----------------------------------------------------------
 
-skaiciai = [1,2,3,4,5,6,7,8,9,10]
+# skaiciai = [1,2,3,4,5,6,7,8,9,10]
+#
+# lyginiai_skaiciai = list(filter(lambda x: x % 2 == 0, skaiciai))
+# print(lyginiai_skaiciai)
 
-lyginiai_skaiciai = list(filter(lambda x: x % 2 == 0, skaiciai))
-print(lyginiai_skaiciai)
+##----------------------------------------------------------
+##----------------------------------------------------------
+# 11. Įvadas į lambda funkcijas
+# Užduotis 11:
+# Sukurkite lambda funkciją pakelti_kvadratu, kuri priima vieną skaičių ir grąžina jo
+# kvadratą.
+
+# skaiciai = [2,4]
+# kvadratu = lambda x: x **2
+# print(kvadratu(9))
+
+##----------------------------------------------------------
+# 12. Lambda funkcijos ir rūšiavimas
+# Užduotis 12:
+
+darbuotojai = [("Jonas", 2500), ("Asta", 3200), ("Mantas", 2100)]
+# sort_darbuotojai = sorted(darbuotojai, key=lambda x: x[1])  //// sis irgi geras sprendimas
+# print(sort_darbuotojai)
+res = sorted(darbuotojai, key = lambda l:l[1],)
+print(res)
+
+##----------------------------------------------------------
+# 13. Lambda funkcija su filter()
+# Užduotis 14:
+
+# Turite sąrašą [5, 10, 15, 20, 25, 30]. Naudodami filter() ir lambda funkciją,
+# palikite tik skaičius, kurie dalijasi iš 10.
+
+sk = [5, 10, 15, 20, 25, 30]
+dalijasi_is_10 = list(filter(lambda x: x % 10 ==0, sk))
+print(dalijasi_is_10)
