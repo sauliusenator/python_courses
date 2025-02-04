@@ -13,3 +13,5 @@ my_datetime = datetime.datetime.strptime(ivedam, '%Y-%m-%d, %H:%M:%S')
 formatted_time = my_datetime.strftime('%d/%m/%Y, %H:%M:%S')
 print(formatted_time)
 
+
+data_laikas = datetime(2022, 12, 31, 23, 59, 59)
