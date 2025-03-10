@@ -1,5 +1,6 @@
 
-from models import Projektas, engine
+
+from models import engine, Projektas
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import MultipleResultsFound, NoResultFound
 
@@ -14,20 +15,37 @@ print_all_records()
 
 # session.query(<lenteles klasė>).filter_by(<lauko_pavadinimas>=<paieškos frazė>).all()
 
-filtered_rows = session.query(Projektas).filter_by(kaina=321).all()
-print(f'filtered_rows: {filtered_rows[0]}')
+# naujas_projektas = Projektas(pavadinimas="LabaiGerasProjektas3210", kaina=500000)
+#session.add(naujas_projektas)
+#session.commit()
 
-paisekos_pavadinimas = 'Web project'
-filtered_rows = session.query(Projektas).filter_by(pavadinimas=paisekos_pavadinimas, kaina=10000).all()
-print(f'filtered_rows: {filtered_rows[0]}')
+print('-' * 30)
+
+projektai = session.query(Projektas).order_by(Projektas.kaina).all()
+# for proj in projektai:
+print(projektai)
 
 
-try:
-    filtered_rows = session.query(Projektas).filter_by(pavadinimas='Project2').one()
-except NoResultFound:
-    print('Nėra rezultatų')
-except MultipleResultsFound:
-    print('Ne vienas rezultatas')
+# filtered_rowa = session.query(Projektas).filter(Projektas.pavadinimas.ilike('%Projektas%'))
+# for row in filtered_rows:
+#     print(row)
+
+
+
+# filtered_rows = session.query(Projektas).filter_by(kaina=321).all()
+# print(f'filtered_rows: {filtered_rows[0]}')
+#
+# paisekos_pavadinimas = 'Web project'
+# filtered_rows = session.query(Projektas).filter_by(pavadinimas=paisekos_pavadinimas, kaina=10000).all()
+# print(f'filtered_rows: {filtered_rows[0]}')
+#
+#
+# try:
+#     filtered_rows = session.query(Projektas).filter_by(pavadinimas='Project2').one()
+# except NoResultFound:
+#     print('Nėra rezultatų')
+# except MultipleResultsFound:
+#     print('Ne vienas rezultatas')
 
 
 

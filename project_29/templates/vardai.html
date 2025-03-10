@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vardu sarasas</title>
+    </head>
+    <body>
+        <h4>Vardai gauti is Python faile parasyto listo</h4>
+        <p>{{ names_for_template }}</p>
+        <p>Vardai po viena:</p>
+        {% for elem in names_for_template %}
+        <p>- {{ elem }}</p>
+        {% endfor %}
+        <span>Naudingos nuoruodos:</span>
+        <p><a href="www.github.com">Github</a></p>
+        <p><a href="www.facebook.com">Facebook</a></p>
+        <p><a href="www.google.com">Google</a></p>
+    </body>
+</html>

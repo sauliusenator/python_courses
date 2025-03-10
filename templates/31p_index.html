@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mokiniai</title>
+</head>
+<body>
+    <h1>Mokinių Sąrašas</h1>
+
+    <form method="GET" action="/">
+        <input type="text" name="paieska" placeholder="Ieškoti pagal vardą...">
+        <button type="submit">Ieškoti</button>
+    </form>
+
+    <ul>
+        {% for mokinys in mokiniai %}
+            <li>{{ mokinys.vardas }} - {{ mokinys.pavarde }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
