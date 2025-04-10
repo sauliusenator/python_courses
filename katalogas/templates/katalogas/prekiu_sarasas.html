@@ -1,0 +1,49 @@
+{% extends 'katalogas/base.html' %}
+{% block content %}
+    <form method="get" action="">
+        <div>
+            <input type="text" name="q" placeholder="Paieška pagal pavadinimą" value="{{ request.GET.q }}">
+            <select name="kategorija">
+                <option value="">Visos kategorijos</option>
+                {% for value, label in kategorijos %}
+                    <option value="{{ value }}" {% if request.GET.kategorija == value %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Filtruoti</button>
+        </div>
+    </form>
+
+    <div class="actions">
+        <a href="{% url 'nauja_preke' %}">Pridėti naują prekę</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pavadinimas</th>
+                <th>Aprašymas</th>
+                <th>Kaina</th>
+                <th>Kategorija</th>
+                <th>Veiksmai</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for preke in prekes %}
+            <tr>
+                <td>{{ preke.pavadinimas }}</td>
+                <td>{{ preke.aprasymas }}</td>
+                <td>{{ preke.kaina }} €</td>
+                <td>{{ preke.get_kategorija_display }}</td>
+                <td>
+                    <a href="{% url 'redaguoti_preke' preke.pk %}">Redaguoti</a> |
+                    <a href="{% url 'istrinti_preke' preke.pk %}">Ištrinti</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">Nerasta prekių</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

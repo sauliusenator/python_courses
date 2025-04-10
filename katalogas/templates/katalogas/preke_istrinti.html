@@ -1,0 +1,12 @@
+{% extends 'katalogas/base.html' %}
+{% block content %}
+
+    <h2>Ištrinti prekę</h2>
+    <p>Ar tikrai norite ištrinti prekę "{{ object.pavadinimas }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+
+        <button type="submit">Taip, ištrinti</button>
+        <a href="{% url 'prekiu_sarasas' %}">Atšaukti</a>
+    </form>
+{% endblock %}
